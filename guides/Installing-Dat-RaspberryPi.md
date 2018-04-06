@@ -102,7 +102,7 @@ Dat is a powerful p2p protocol that enables people to publish content and inform
 
 ## Rename the Pi
 
-When dealing with multiple connected devices, you won't want to accidentally connect to the wrong one. To change `raspberrypi` to something else, edit its name in both files:
+When dealing with multiple connected devices, you won't want to accidentally connect to the wrong one. To change the device's name from `raspberrypi` to something else, edit its name in both of these files:
 ```
 sudo nano /etc/hostname
 sudo nano /etc/hosts

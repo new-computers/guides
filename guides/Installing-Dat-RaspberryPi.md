@@ -1,16 +1,6 @@
 # Installing Dat on a Raspberry Pi
 
-This is a guide to getting Dat running on a Raspberry Pi. Most of the information is already available on [https://docs.datproject.org/install](https://docs.datproject.org/install) there are just a few more Pi specific steps in this guide.
-
-Not sure what Dat is? Watch this talk: https://www.youtube.com/watch?v=YFzr6vSNrrc
-
-### Why run Dat on a Pi?
-
-Dat is a powerful p2p protocol that enables people to publish content and information to the web from their personal computers. This fundamentally changes the relationship people have to the internet by breaking the client server hierarchy and opens the realm of self publishing to everyone. When everyone is a publisher, it becomes important for your content to be available on the internet whether your laptop is on or off. With a Raspberry Pi, you can make sure this content stays online for free as long as you have an internet connection avoiding having to rely on cloud providers to keep our content online. This guide is the starting point for participating in this new, independent version of the internet.
-
-<!-- For more advanced guides please see:
-- [Serve custom dat and https urls using dathttpd on Digital Ocean Droplet](https://docs.datproject.org/install)
-- [Install dathttpd on a Raspberry Pi](https://docs.datproject.org/install) -->
+This is a guide to getting Dat running on a Raspberry Pi. Most of the information is already available on [https://docs.datproject.org/install](https://docs.datproject.org/install). Why? see the [notes](#notes).
 
 If you'd like to help make this process easier, we are working on a plug and play version of this process that includes a front end for managing your dat-pi. [Please see our issues for more discussions.](https://github.com/new-computers/dat-rpi/issues)
 
@@ -40,13 +30,9 @@ Continue this section on your main computer with the Pi connected to power and b
 3. Enter `sudo apt-get update && sudo apt-get upgrade` to make sure your system is up to date - this will take some time depending on your connection.
 4. We also need to get the latest stable version of node:
    - `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash`
-   - `export NVM_DIR="$HOME/.nvm" b`
-   - `[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"`
-   - `[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"`
-   - `source ~/.bashrc`
-   - `nvm install 8`
-   - `nvm use 8`
-5. Now we can install Dat. `npm install -g dat`
+   - `source ~/.bashrc` or restart your terminal session
+   - `nvm install 8` && `nvm use 8`
+5. Now we can install Dat. `npm install -g dat`. If dat throws EACCESS errors try `sudo npm install -g dat`.
 7. Check that dat has been install and can connect with `dat doctor` if you see the following, you should be able to share and peer dats.
     ```
       [info] TCP ONLY - success!
@@ -64,7 +50,19 @@ To set up a permanent peer for your Dat urls see [Running a permanent Dat server
 
 Or to set up custom Dat and http urls for your sites see [Setting up a custom urls with dathttpd](https://github.com/beakerbrowser/dathttpd)
 
-----
+
+## Notes
+
+Not sure what Dat is? Watch this talk: https://www.youtube.com/watch?v=YFzr6vSNrrc
+
+### Why run Dat on a Pi?
+
+Dat is a powerful p2p protocol that enables people to publish content and information to the web from their personal computers. This fundamentally changes the relationship people have to the internet by breaking the client server hierarchy and opens the realm of self publishing to everyone. When everyone is a publisher, it becomes important for your content to be available on the internet whether your laptop is on or off. With a Raspberry Pi, you can make sure this content stays online for free as long as you have an internet connection avoiding having to rely on cloud providers to keep our content online. This guide is the starting point for participating in this new, independent version of the internet.
+
+<!-- For more advanced guides please see:
+- [Serve custom dat and https urls using dathttpd on Digital Ocean Droplet](https://docs.datproject.org/install)
+- [Install dathttpd on a Raspberry Pi](https://docs.datproject.org/install) -->
+
 
 ## Advanced
 

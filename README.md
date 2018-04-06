@@ -1,4 +1,4 @@
-# Standalone Dat Servers
+# Guides for New Computers
 
 In this repo you can find a collection of guides on how to self host and self publish with p2p tools. Feel free to submit PRs and open issues for ideas or errors you run in to or to suggest a new guide.
 

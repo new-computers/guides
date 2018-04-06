@@ -100,6 +100,13 @@ Dat is a powerful p2p protocol that enables people to publish content and inform
     ```
 6. Continue with the [Installing Dat](#installing-dat) part of the guide.
 
+## Rename the Pi
+
+When dealing with multiple connected devices, you won't want to accidentally connect to the wrong one. To change `raspberrypi` to something else, edit its name in both files:
+```
+sudo nano /etc/hostname
+sudo nano /etc/hosts
+```
 
 ----
 ### Changelog
